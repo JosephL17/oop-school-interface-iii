@@ -12,8 +12,9 @@ while True:
     # View Individual Student <student_id>
     elif mode == '2':
         student_id = input('Enter student id:')
-        student_string = str(school.find_student_by_id(student_id))
-        print(student_string)
+        # student_string = str(school.find_student_by_id(student_id))
+        # print(student_string)
+        school.find_student_by_id(student_id)
 
     # Add a Student
     elif mode == '3':
@@ -23,13 +24,10 @@ while True:
         student_data['school_id'] = input('Enter student school id: \n')
         student_data['password']  = input('Enter student password: \n')
         print(type(student_data))
-        #new_student = Student(student_data)
         school.add_student(student_data)
-        
-        # school.list_students()
        
 
-    #Remove a Student <student_id>
+    #Remove a Student <student name>
     elif mode == '4':
         delete = input('Name of student to delete: ')
         Student.student_list = [student for student in Student.student_list if student.name != delete]

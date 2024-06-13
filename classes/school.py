@@ -21,8 +21,10 @@ class School:
             print(f'{i + 1}.{student.name} | {student.school_id}')
 
     def find_student_by_id(self, student_id):
-        for student in self.students:
+        for student in Student.student_list:
             if student.school_id == student_id:
-                return student
+                print('\n')
+                print(f""" Name: {student.name} | ID: {student.school_id}  """)
+
 
     
