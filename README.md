@@ -30,7 +30,7 @@ elif mode == '3':
     student_data['school_id'] = input('Enter student school id: \n')
     student_data['password']  = input('Enter student password: \n')
   
-    school.add_student(student_data)
+    school.add_student(Student(**student_data))
 elif mode == '5':
     break
 ```
